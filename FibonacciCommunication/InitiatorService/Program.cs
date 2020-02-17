@@ -14,16 +14,16 @@ namespace InitiatorService
     {
         public static async Task Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
-            using (var host = CreateHostBuilder(args).Build())
-            {
-                await host.StartAsync();
+            CreateHostBuilder(args).Build().Run();
+            //using (var host = CreateHostBuilder(args).Build())
+            //{
+            //    await host.StartAsync();
 
-                var worker = host.Services.GetService<WorkerService>();
-                worker.StartListen();
+            //    var worker = host.Services.GetService<WorkerService>();
+            //    worker.StartListen();
 
-                await host.WaitForShutdownAsync();
-            }
+            //    await host.WaitForShutdownAsync();
+            //}
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

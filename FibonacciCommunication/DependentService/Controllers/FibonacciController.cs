@@ -25,7 +25,6 @@ namespace DependentService.Controllers
         [Route("next")]
         public async Task CalculateNext([FromBody]FibonacciNumber number)
         {
-            _logger.LogInformation("Received following number: @number", number);
             await _communicationService.ReceiveNumberAndSendNext(number);
         }
     }

@@ -33,8 +33,8 @@ namespace InitiatorService
             services.AddHttpClient<IMessageSender, HttpSender>();
             services.AddSingleton<ICommunicationService, CommunicationService>();
 
-            //services.AddHostedService<WorkerService>();
-            services.AddSingleton<WorkerService>();
+            services.AddHostedService<WorkerService>();
+            //services.AddSingleton<WorkerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

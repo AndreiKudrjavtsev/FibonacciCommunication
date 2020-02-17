@@ -31,8 +31,6 @@ namespace InitiatorService
                 _communicationService.ReceiveNumberAndSendNext,
                 configure => configure.WithQueueName(_queueName));
 
-            //while(!cancellationToken.IsCancellationRequested)
-
             return Task.CompletedTask;
         }
 
